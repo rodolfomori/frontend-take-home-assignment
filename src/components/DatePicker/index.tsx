@@ -4,19 +4,14 @@ import { Label } from '../index';
 import { Container, ImgButton } from './styles';
 import Arrow from '../../icons/arrow.svg';
 import { MainDate } from './MainDate';
+import { useData } from '../../hooks/data';
 
 export const DatePicker: React.FC = () => {
-  const lessMonth = (): void => {
-    console.log('less');
-  };
-
-  const moreMonth = (): void => {
-    console.log('more');
-  };
+  const { increaseDate, decreaseDate } = useData();
 
   const handleKeyDown = (e: any) => {
-    if (e?.keyCode === 37) lessMonth();
-    else if (e?.keyCode === 39) moreMonth();
+    if (e?.keyCode === 37) decreaseDate();
+    else if (e?.keyCode === 39) increaseDate();
   };
 
   React.useEffect(() => {
@@ -30,11 +25,11 @@ export const DatePicker: React.FC = () => {
     <>
       <Label>Reach goal by</Label>
       <Container>
-        <ImgButton onClick={lessMonth}>
+        <ImgButton onClick={decreaseDate}>
           <img src={Arrow} alt="button-left" />
         </ImgButton>
         <MainDate />
-        <ImgButton onClick={moreMonth}>
+        <ImgButton onClick={increaseDate}>
           <img src={Arrow} className="right" alt="button-rigth" />
         </ImgButton>
       </Container>

@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { useData } from '../../../hooks/data';
-import { getMonth } from '../../../utils';
+import { getMonthName } from '../../../utils';
 import { Container, Mouth, Year } from './styles';
 
 export const MainDate: React.FC = () => {
@@ -9,8 +9,10 @@ export const MainDate: React.FC = () => {
 
   return (
     <Container>
-      <Mouth> {getMonth(chosenMonth)}</Mouth>
-      <Year>{chosenYear}</Year>
+      <Mouth data-testid="date-picker-mounth">
+        {getMonthName(chosenMonth)}
+      </Mouth>
+      <Year data-testid="date-picker-year">{chosenYear}</Year>
     </Container>
   );
 };

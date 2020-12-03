@@ -5,12 +5,8 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  onClick,
-  ...rest
-}) => (
-  <Container onClick={() => onClick} type="button" {...rest}>
+export const ArrowButton: React.FC<ButtonProps> = ({ children, ...rest }) => (
+  <Container type="button" {...rest}>
     {children}
   </Container>
 );

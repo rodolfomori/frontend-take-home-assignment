@@ -1,5 +1,3 @@
-import NumberFormat from 'react-number-format';
-
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -14,8 +12,14 @@ export const Container = styled.div`
   max-width: 560px;
 
   .input {
-    margin-bottom: 16px;
+    padding-left: 44px;
   }
+`;
+
+export const DollarSign = styled.img`
+  position: absolute;
+  margin-top: 33px;
+  margin-left: 17px;
 `;
 
 export const WrapperElements = styled.div`
@@ -32,24 +36,4 @@ export const WrapperButton = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 32px;
-`;
-
-export const NumberInput = styled(NumberFormat)`
-  background: ${props => props.theme.pallete.whiteBackground};
-  border: 1px solid ${props => props.theme.pallete.borderColor};
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 10px;
-  font-family: 'Rubik', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 120%;
-  width: 100%;
-  color: ${props => props.theme.pallete.inputTextColor};
-
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
 `;

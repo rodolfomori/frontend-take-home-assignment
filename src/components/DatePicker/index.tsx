@@ -2,9 +2,8 @@ import * as React from 'react';
 
 import { useData } from '../../hooks/data';
 import Arrow from '../../icons/arrow.svg';
-import { Label } from '../index';
-import { MainDate } from './MainDate';
-import { Container, ImgButton } from './styles';
+import { Label, MainDate, ArrowButton } from '../index';
+import { Container } from './styles';
 
 export const DatePicker: React.FC = () => {
   const { increaseDate, decreaseDate } = useData();
@@ -25,13 +24,19 @@ export const DatePicker: React.FC = () => {
     <div>
       <Label>Reach goal by</Label>
       <Container>
-        <ImgButton onClick={decreaseDate}>
+        <ArrowButton
+          data-testid="decrese-button"
+          onClick={() => decreaseDate()}
+        >
           <img src={Arrow} alt="button-left" />
-        </ImgButton>
+        </ArrowButton>
         <MainDate />
-        <ImgButton onClick={increaseDate}>
+        <ArrowButton
+          data-testid="increase-button"
+          onClick={() => increaseDate()}
+        >
           <img src={Arrow} className="right" alt="button-rigth" />
-        </ImgButton>
+        </ArrowButton>
       </Container>
     </div>
   );

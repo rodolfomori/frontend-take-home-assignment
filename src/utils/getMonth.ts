@@ -12,6 +12,6 @@ const months = [
   'November',
   'Dezember'
 ];
-export const getMonth = (month: number): string => {
+export const getMonthName = (month: number): string => {
   return months[month];
 };

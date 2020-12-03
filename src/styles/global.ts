@@ -8,12 +8,14 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body{
-    font-family: 'Work Sans';
-    background: #E5E5E5;
+    font-family: 'Work Sans',sans-serif;
+    background: #F4F8FA;
     color:#1E2A32;
     -webkit-font-smoothing: antialiased !important;
   }
   button{
     cursor: pointer;
+    font-family: 'Work Sans',sans-serif;
+
   }
 `;

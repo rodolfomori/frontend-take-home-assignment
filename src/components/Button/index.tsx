@@ -3,12 +3,8 @@ import * as React from 'react';
 
 import { Container } from './styles';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  isLoading?: boolean;
-}
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  isLoading,
-  ...rest
-}) => <Container {...rest}>{isLoading ? 'Carregando...' : children}</Container>;
+export const Button: React.FC<ButtonProps> = ({ children, ...rest }) => (
+  <Container {...rest}>{children}</Container>
+);

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #ffffff;
+  background: ${props => props.theme.pallete.whiteBackground};
   border-radius: 8px;
-  border: 1px solid #e9eef2;
+  border: 1px solid ${props => props.theme.pallete.borderColor};
   display: flex;
   flex-direction: column;
   margin-top: 24px;
@@ -34,7 +34,7 @@ export const TopWrapper = styled.div`
   }
 
   span {
-    font-family: 'Rubik';
+    font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -42,7 +42,7 @@ export const TopWrapper = styled.div`
 
     text-align: right;
 
-    color: #0079ff;
+    color: ${props => props.theme.pallete.textBlue};
 
     flex: none;
     order: 0;
@@ -53,7 +53,7 @@ export const TopWrapper = styled.div`
 `;
 
 export const BottomWrapper = styled.div`
-  background: #f4f8fa;
+  background: ${props => props.theme.pallete.backgroud};
   padding: 20px 10px;
 
   p {
@@ -62,13 +62,16 @@ export const BottomWrapper = styled.div`
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-    color: #1e2a32;
+    color: ${props => props.theme.pallete.textBlack};
     flex: none;
     order: 0;
     align-self: stretch;
     flex-grow: 0;
     margin: 0px 10px;
     text-align: center;
+    ${props => props.theme.media.desktop} {
+      text-align: left;
+    }
   }
   strong {
     font-weight: bold;

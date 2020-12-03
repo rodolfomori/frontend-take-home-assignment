@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Container, TopWrapper, BottomWrapper } from './styles';
 import { useData } from '../../hooks/data';
 import { currencyFormatter, getMonth } from '../../utils';
+import { Container, TopWrapper, BottomWrapper } from './styles';
 
 export const CardAmount: React.FC = () => {
   const {
@@ -17,7 +17,9 @@ export const CardAmount: React.FC = () => {
     <Container>
       <TopWrapper>
         <p>Monthly amount</p>
-        <span>{monthlyAmount}</span>
+        <span>
+          {monthlyAmount ? currencyFormatter(Number(monthlyAmount)) : '$0'}
+        </span>
       </TopWrapper>
       <BottomWrapper>
         <p>

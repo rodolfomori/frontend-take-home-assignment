@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  background-color: ${props => props.theme.whiteBackground};
+  background-color: ${props => props.theme.pallete.whiteBackground};
 
   img {
     margin-left: 16px;

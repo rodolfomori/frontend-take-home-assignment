@@ -6,6 +6,7 @@ import {
   useContext,
   useEffect
 } from 'react';
+
 import { differenceInMonths, addMonths } from 'date-fns';
 interface DataContextData {
   totalAmount: string;
@@ -62,7 +63,7 @@ export const DataProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     setMonthlyAmount(
-      `$${(Number(totalAmount) / mounthQuantity).toFixed(0).toString()}`
+      `${(Number(totalAmount) / mounthQuantity).toFixed(0).toString()}`
     );
   }, [mounthQuantity, totalAmount]);
 

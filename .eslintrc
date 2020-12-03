@@ -17,7 +17,15 @@
     "@typescript-eslint/explicit-member-accessibility": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/no-explicit-any": 1,
-    "@typescript-eslint/camelcase": 1
+    "@typescript-eslint/camelcase": 1,
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": ["/^react/", "module", "/^@shared/", ["parent", "sibling", "index"]],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
   },
   "env": {
     "browser": true,
@@ -28,7 +36,7 @@
   "globals": {
     "document": false
   },
-  "plugins": ["react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": ["react-hooks", "@typescript-eslint", "prettier", "eslint-plugin-import-helpers"],
   "settings": {
     "import/resolver": {
       "node": {

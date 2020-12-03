@@ -4,7 +4,7 @@ export const Container = styled.div`
   width: 100%;
   h2 {
     margin-top: 32px;
-    color: ${props => props.theme.mainBlue};
+    color: ${props => props.theme.pallete.mainBlue};
     font-style: normal;
     font-weight: normal;
     font-size: 18px;

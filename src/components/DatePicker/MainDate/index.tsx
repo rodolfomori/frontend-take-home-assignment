@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Container, Mouth, Year } from './styles';
 import { useData } from '../../../hooks/data';
 import { getMonth } from '../../../utils';
+import { Container, Mouth, Year } from './styles';
 
 export const MainDate: React.FC = () => {
   const { chosenMonth, chosenYear } = useData();

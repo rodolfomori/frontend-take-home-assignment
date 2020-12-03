@@ -6,7 +6,7 @@ export const Container = styled.div`
     font-weight: normal;
     font-size: 12px;
     line-height: 150%;
-    color: #1e2a32;
+    color: ${props => props.theme.pallete.textBlack};
     flex: none;
     order: 0;
     align-self: flex-start;

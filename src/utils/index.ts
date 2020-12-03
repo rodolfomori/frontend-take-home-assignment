@@ -1,2 +1,2 @@
 export * from './currencyFormatter';
-export * from './months';
+export * from './getMonth';

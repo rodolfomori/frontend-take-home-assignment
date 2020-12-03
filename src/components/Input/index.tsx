@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { NumberInput, Container } from './styled';
+
 import { Label } from '../index';
+import { NumberInput, Container } from './styled';
 
 export function Input({
   defaultValue,

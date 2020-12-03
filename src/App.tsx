@@ -1,13 +1,15 @@
 import * as React from 'react';
-import GlobalStyle from './styles/global';
-import { Home } from './containers/Home';
+
 import { ThemeProvider } from 'styled-components';
-import pallete from './styles/palette';
+
+import { Home } from './containers/Home';
 import AppProvider from './hooks';
+import GlobalStyle from './styles/global';
+import theme from './styles/theme';
 
 const App: React.FunctionComponent = () => {
   return (
-    <ThemeProvider theme={pallete}>
+    <ThemeProvider theme={theme}>
       <AppProvider>
         <Home />
       </AppProvider>

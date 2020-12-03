@@ -1,34 +1,38 @@
 import * as React from 'react';
 
-import { Button, Input, CardAmount, DatePicker } from '../index';
-import { Container, WrapperButton, NumberInput } from './styles';
-import { HeaderDashboard } from './HeaderDashboard';
-import { currencyFormatter } from '../../utils';
-import NumberFormat from 'react-number-format';
 import { useData } from '../../hooks/data';
+import { Button, Input, CardAmount, DatePicker } from '../index';
+import { HeaderDashboard } from './HeaderDashboard';
+import { Container, WrapperButton, WrapperElements } from './styles';
 
 export const Dashboard: React.FC = () => {
-  const [inputValue, setInputValue] = React.useState(25000);
   const { totalAmount, setTotalAmount } = useData();
+  interface Values {
+    floatValue: number;
+    formattedValue: string;
+    value: string;
+  }
 
   return (
     <Container>
       <HeaderDashboard />
-      <Input
-        defaultValue={0}
-        placeholder={'$ 0,00'}
-        allowEmptyFormatting={true}
-        thousandSeparator={true}
-        allowNegative={false}
-        prefix={'$'}
-        value={totalAmount}
-        onValueChange={values => {
-          const { floatValue } = values;
-          setTotalAmount(floatValue);
-        }}
-      />
+      <WrapperElements>
+        <Input
+          defaultValue={0}
+          placeholder={'$ 0,00'}
+          allowEmptyFormatting={true}
+          thousandSeparator={true}
+          allowNegative={false}
+          prefix={'$'}
+          value={totalAmount}
+          onValueChange={(values: Values) => {
+            const { floatValue } = values;
+            setTotalAmount(floatValue);
+          }}
+        />
 
-      <DatePicker />
+        <DatePicker />
+      </WrapperElements>
       <CardAmount />
       <WrapperButton>
         <Button>confirm</Button>

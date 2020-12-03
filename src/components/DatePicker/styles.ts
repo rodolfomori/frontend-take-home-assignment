@@ -1,8 +1,12 @@
+import { ButtonHTMLAttributes } from 'react';
+
 import styled from 'styled-components';
 
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement>;
+
 export const Container = styled.div`
-  background: #ffffff;
-  border: 1px solid #e9eef2;
+  background: ${props => props.theme.pallete.whiteBackground};
+  border: 1px solid ${props => props.theme.pallete.borderColor};
   box-sizing: border-box;
   border-radius: 4px;
   display: flex;
@@ -10,8 +14,8 @@ export const Container = styled.div`
   height: 56px;
 `;
 
-export const ImgButton = styled.button`
-  background: #ffffff;
+export const ImgButton = styled.button<ButtonProps>`
+  background: ${props => props.theme.pallete.whiteBackground};
   border: none;
   min-width: 44px;
 

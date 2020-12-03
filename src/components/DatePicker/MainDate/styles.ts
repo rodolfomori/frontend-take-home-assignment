@@ -12,7 +12,7 @@ const textStyle = css`
   font-size: 14px;
   line-height: 150%;
   text-align: center;
-  color: #1e2a32;
+  color: ${props => props.theme.pallete.textBlack};
   flex: none;
   order: 0;
   align-self: stretch;
@@ -26,6 +26,5 @@ export const Mouth = styled.span`
 
 export const Year = styled.span`
   ${textStyle}
-  color: ${props => props.theme.textGray};
   font-weight: 400;
 `;

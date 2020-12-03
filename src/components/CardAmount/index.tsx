@@ -17,7 +17,7 @@ export const CardAmount: React.FC = () => {
     <Container>
       <TopWrapper>
         <p>Monthly amount</p>
-        <span>
+        <span data-testid="monthly-amount">
           {monthlyAmount ? currencyFormatter(Number(monthlyAmount)) : '$0'}
         </span>
       </TopWrapper>

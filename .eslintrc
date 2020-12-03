@@ -4,7 +4,8 @@
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:cypress/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "rules": {
@@ -31,12 +32,14 @@
     "browser": true,
     "node": true,
     "es6": true,
-    "jest": true
+    "jest": true,
+    "cypress/globals": true
+
   },
   "globals": {
     "document": false
   },
-  "plugins": ["react-hooks", "@typescript-eslint", "prettier", "eslint-plugin-import-helpers"],
+  "plugins": ["react-hooks", "@typescript-eslint", "prettier", "eslint-plugin-import-helpers", "cypress"],
   "settings": {
     "import/resolver": {
       "node": {

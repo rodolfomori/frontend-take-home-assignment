@@ -18,6 +18,7 @@ export const Dashboard: React.FC = () => {
       <HeaderDashboard />
       <WrapperElements>
         <Input
+          data-testid="input"
           defaultValue={0}
           placeholder={'$ 0,00'}
           allowEmptyFormatting={true}

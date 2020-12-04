@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import { useData } from '../../hooks/data';
-import Money from '../../icons/money.svg';
 import { Button, Input, CardAmount, DatePicker } from '../index';
 import { HeaderDashboard } from './HeaderDashboard';
 import {
@@ -18,7 +17,7 @@ export const Dashboard: React.FC = () => {
       <HeaderDashboard />
       <WrapperElements>
         <div>
-          <DollarSign src={Money} />
+          <DollarSign />
           <Input
             data-testid="input-total-amount"
             defaultValue={0}

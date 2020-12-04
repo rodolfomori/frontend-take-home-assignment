@@ -8,4 +8,8 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   height: 56px;
+
+  .right {
+    transform: rotate(180deg);
+  }
 `;

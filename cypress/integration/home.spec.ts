@@ -1,6 +1,6 @@
-import { addMonths } from 'date-fns';
+import { addMonths, differenceInMonths } from 'date-fns';
 
-import { getMonthName } from '../../src/utils';
+import { getMonthName, currencyFormatter } from '../../src/utils';
 
 context('Home Buy a house', () => {
   before(() => {
@@ -11,6 +11,7 @@ context('Home Buy a house', () => {
   const firtsPlanning = new Date(addMonths(date, 48));
   const month = getMonthName(firtsPlanning.getMonth());
   const year = firtsPlanning.getFullYear();
+
   describe('Initial State', () => {
     it('Should load with correct initial state', () => {
       cy.get('[data-testid="input-total-amount"]').should(
@@ -53,10 +54,32 @@ context('Home Buy a house', () => {
       cy.get('[data-testid="monthly-amount"]').should('have.text', '$12,500');
       cy.get('[data-testid="goal-value"]').should('have.text', '$600,000');
     });
+
+    it('Should calculte correct value when type a randon number', () => {
+      const randomNumber = Math.floor(Math.random() * 65536);
+      const newDate = new Date(year, date.getMonth() + 1);
+
+      cy.get('[data-testid="input-total-amount"]').clear();
+      cy.get('[data-testid="input-total-amount"]').type(
+        randomNumber.toString()
+      );
+      cy.get('[data-testid="monthly-amount"]').should(
+        'have.text',
+        currencyFormatter(randomNumber / differenceInMonths(newDate, date))
+      );
+
+      cy.get('[data-testid="goal-value"]').should(
+        'have.text',
+        currencyFormatter(randomNumber)
+      );
+    });
   });
 
   describe('Calculate correct value when change goal date', () => {
     it('Should calculte correct value when decrese months', () => {
+      cy.get('[data-testid="input-total-amount"]').clear();
+      cy.get('[data-testid="input-total-amount"]').type('600000');
+
       cy.get('[data-testid="decrese-button"]').click();
       cy.get('[data-testid="monthly-amount"]').should('have.text', '$12,800');
 

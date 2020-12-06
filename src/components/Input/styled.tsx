@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { default as NumberFormat } from 'react-number-format';
 
 import styled from 'styled-components';
@@ -6,7 +7,9 @@ import { NumberFormatProps } from './index';
 
 export const Container = styled.div``;
 
-export const NumberInput = styled(NumberFormat)<NumberFormatProps>`
+export const NumberInput = styled(props => <NumberFormat {...props} />)<
+  NumberFormatProps
+>`
   background: ${props => props.theme.pallete.whiteBackground};
   border: 1px solid ${props => props.theme.pallete.borderColor};
   box-sizing: border-box;

@@ -1,9 +1,9 @@
 import * as React from 'react';
 
-import { DataProvider } from './data';
+import { GoalCalculationProvider } from './goalCalculation';
 
 const AppProvider: React.FC = ({ children }) => (
-  <DataProvider>{children}</DataProvider>
+  <GoalCalculationProvider>{children}</GoalCalculationProvider>
 );
 
 export default AppProvider;

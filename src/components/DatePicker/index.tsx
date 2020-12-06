@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import { useData } from '../../hooks/data';
+import { useGoalCalculation } from '../../hooks/goalCalculation';
 import Arrow from '../../icons/Arrow';
 import { Label, MainDate, ArrowButton } from '../index';
 import { Container } from './styles';
 
 export const DatePicker: React.FC = () => {
-  const { increaseDate, decreaseDate } = useData();
+  const { increaseDate, decreaseDate } = useGoalCalculation();
 
   React.useEffect(() => {
     const handleKeyDown = (e: any) => {

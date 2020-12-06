@@ -7,10 +7,10 @@ const months = [
   'June',
   'July',
   'August',
-  'Septemper',
+  'September',
   'October',
   'November',
-  'Dezember'
+  'December'
 ];
 export const getMonthName = (month: number): string => {
   return months[month];

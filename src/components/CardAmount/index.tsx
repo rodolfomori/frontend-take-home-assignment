@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useData } from '../../hooks/data';
+import { useGoalCalculation } from '../../hooks/goalCalculation';
 import { currencyFormatter, getMonthName } from '../../utils';
 import { Container, TopWrapper, BottomWrapper } from './styles';
 
@@ -11,7 +11,7 @@ export const CardAmount: React.FC = () => {
     chosenMonth,
     chosenYear,
     mounthQuantity
-  } = useData();
+  } = useGoalCalculation();
 
   return (
     <Container>

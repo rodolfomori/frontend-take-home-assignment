@@ -8,7 +8,7 @@ import {
 } from 'react';
 
 import { differenceInMonths, addMonths } from 'date-fns';
-interface DataContextData {
+interface GoalCalculationContext {
   totalAmount: string;
   monthlyAmount: string;
   setTotalAmount: Function;
@@ -19,9 +19,11 @@ interface DataContextData {
   decreaseDate: Function;
 }
 
-const DataContext = createContext<DataContextData>({} as DataContextData);
+const GoalCalculationContext = createContext<GoalCalculationContext>(
+  {} as GoalCalculationContext
+);
 
-export const DataProvider: React.FC = ({ children }) => {
+export const GoalCalculationProvider: React.FC = ({ children }) => {
   const [date] = useState<Date>(new Date());
   const firtsPlanning = new Date(addMonths(date, 48));
   const [totalAmount, setTotalAmount] = useState<string>('25000');
@@ -68,7 +70,7 @@ export const DataProvider: React.FC = ({ children }) => {
   }, [mounthQuantity, totalAmount]);
 
   return (
-    <DataContext.Provider
+    <GoalCalculationContext.Provider
       value={{
         totalAmount,
         setTotalAmount,
@@ -81,15 +83,17 @@ export const DataProvider: React.FC = ({ children }) => {
       }}
     >
       {children}
-    </DataContext.Provider>
+    </GoalCalculationContext.Provider>
   );
 };
 
-export function useData(): DataContextData {
-  const context = useContext(DataContext);
+export function useGoalCalculation(): GoalCalculationContext {
+  const context = useContext(GoalCalculationContext);
 
   if (!context) {
-    throw new Error('useData must be used within an DataProvider');
+    throw new Error(
+      'useGoalCalculation must be used within an GoalCalculationProvider'
+    );
   }
 
   return context;

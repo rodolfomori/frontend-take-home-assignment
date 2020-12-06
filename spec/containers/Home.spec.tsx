@@ -3,8 +3,8 @@ import * as React from 'react';
 import { mount, shallow, render } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 
-import { Button } from '.';
-import theme from '../../styles/theme';
+import { Home } from '../../src/containers/Home';
+import theme from '../../src/styles/theme';
 
 export const mountWithTheme = (children: typeof ThemeProvider) =>
   mount(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
@@ -14,24 +14,11 @@ export const renderWithTheme = (children: typeof ThemeProvider) =>
 
 export const shallowWithTheme = (children: typeof ThemeProvider) =>
   shallow(<ThemeProvider theme={theme}>{children}</ThemeProvider>);
-
-describe('<Button />', function() {
+describe('<Home />', function() {
   it('should render correctly', () => {
-    const component = shallow(<Button />);
+    const component = shallow(<Home />);
 
     expect(typeof component).toBe('object');
-
-    component.unmount();
-  });
-});
-
-describe('when children prop is defined', () => {
-  it('should contain the children prop given', () => {
-    const children = 'confirm';
-
-    const component = shallow(<Button>{children}</Button>);
-
-    expect(component.text()).toEqual(children);
 
     component.unmount();
   });

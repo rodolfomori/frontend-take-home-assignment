@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { useData } from '../../hooks/data';
+import { useGoalCalculation } from '../../hooks/goalCalculation';
 import { Button, Input, CardAmount, DatePicker } from '../index';
 import { HeaderDashboard } from './HeaderDashboard';
 import {
@@ -10,7 +10,7 @@ import {
   DollarSign
 } from './styles';
 export const Dashboard: React.FC = () => {
-  const { totalAmount, setTotalAmount } = useData();
+  const { totalAmount, setTotalAmount } = useGoalCalculation();
 
   return (
     <Container>

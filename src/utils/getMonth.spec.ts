@@ -8,6 +8,6 @@ describe('get month basic tests', function() {
 
   it('should return correct month', () => {
     const month = getMonthName(11);
-    expect(month).toEqual('Dezember');
+    expect(month).toEqual('December');
   });
 });

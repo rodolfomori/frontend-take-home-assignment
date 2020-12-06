@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { useData } from '../../../hooks/data';
+import { useGoalCalculation } from '../../../hooks/goalCalculation';
 import { getMonthName } from '../../../utils';
 import { Container, Mouth, Year } from './styles';
 
 export const MainDate: React.FC = () => {
-  const { chosenMonth, chosenYear } = useData();
+  const { chosenMonth, chosenYear } = useGoalCalculation();
 
   return (
     <Container>

@@ -18,23 +18,23 @@ export const Container = styled.div`
 export const TopWrapper = styled.div<TopWrapperProps>`
   display: flex;
   flex-direction: row;
-  display: flex;
-  justify-content: space-between;
   padding: 20px;
+  justify-content: space-between;
+
+  ${props =>
+    props.size !== 'small' &&
+    css`
+      padding-left: 0px;
+    `}
 
   ${props => props.theme.media.desktop} {
-    ${props =>
-      props.size !== 'small' &&
-      css`
-        padding-left: 0px;
-      `}
+    padding-left: 20px;
   }
 `;
 
 export const Text = styled.p<TextProps>`
   font-style: normal;
   font-weight: normal;
-  font-size: 20px;
   line-height: 120%;
   text-align: center;
   display: flex;
@@ -47,13 +47,16 @@ export const Text = styled.p<TextProps>`
   align-self: stretch;
   flex-grow: 0;
   margin: 0px 10px;
+  font-size: 20px;
+
+  ${props =>
+    (props.size === 'big' || props.size === 'extra') &&
+    css`
+      font-size: 17px;
+    `}
 
   ${props => props.theme.media.desktop} {
-    ${props =>
-      (props.size === 'big' || props.size === 'extra') &&
-      css`
-        font-size: 17px;
-      `}
+    font-size: 20px;
   }
 `;
 
@@ -61,7 +64,6 @@ export const MonthlyAmount = styled.span<MonthlyAmountProps>`
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
   line-height: 120%;
 
   text-align: right;
@@ -73,13 +75,16 @@ export const MonthlyAmount = styled.span<MonthlyAmountProps>`
   align-self: stretch;
   flex-grow: 0;
   margin: 0px 10px;
+  font-size: 32px;
+
+  ${props =>
+    props.size === 'extra' &&
+    css`
+      font-size: ${30 - props.monthlyAmountLength}px;
+    `}
 
   ${props => props.theme.media.desktop} {
-    ${props =>
-      props.size === 'extra' &&
-      css`
-        font-size: ${30 - props.monthlyAmountLength}px;
-      `}
+    font-size: 32px;
   }
 `;
 

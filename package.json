@@ -11,9 +11,7 @@
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
       "eslint --fix",
-      "cross-env CI=true npm run test:jest --bail --findRelatedTests",
-      "git add"
-    ]
+      "cross-env CI=true npm run test:jest --bail --findRelatedTests"    ]
   },
   "dependencies": {
     "acorn": "^7.1.1",

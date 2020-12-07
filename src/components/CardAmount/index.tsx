@@ -10,18 +10,7 @@ import {
   Text
 } from './styles';
 
-export interface MonthlyAmountProps
-  extends React.HTMLAttributes<HTMLSpanElement> {
-  'data-testid': string;
-  // size: string;
-}
-
-export interface TopWrapperProps extends React.HTMLAttributes<HTMLSpanElement> {
-  size: string;
-}
-
 export const CardAmount: React.FC = () => {
-  const [size, setSize] = React.useState<string>('small');
   const {
     totalAmount,
     monthlyAmount,
@@ -29,23 +18,33 @@ export const CardAmount: React.FC = () => {
     chosenYear,
     mounthQuantity
   } = useGoalCalculation();
+  const [size, setSize] = React.useState<string>('small');
+  const [monthlyAmountLength, setMonthlyAmountLength] = React.useState<number>(
+    monthlyAmount.length
+  );
 
   React.useEffect(() => {
-    if (Number(monthlyAmount) > 99999) {
+    if (Number(monthlyAmount) > 999999) {
+      setSize('extra');
+    } else if (Number(monthlyAmount) > 99999) {
       setSize('big');
     } else if (Number(monthlyAmount) > 9999) {
       setSize('medium');
     } else {
       setSize('small');
     }
-    console.log(monthlyAmount.length);
+    setMonthlyAmountLength(monthlyAmount.length);
   }, [monthlyAmount]);
 
   return (
     <Container>
       <TopWrapper size={size}>
         <Text size={size}>Monthly amount</Text>
-        <MonthlyAmount data-testid="monthly-amount">
+        <MonthlyAmount
+          size={size}
+          monthlyAmountLength={monthlyAmountLength}
+          data-testid="monthly-amount"
+        >
           {monthlyAmount && !isNaN(Number(monthlyAmount))
             ? currencyFormatter(Number(monthlyAmount))
             : '$0'}

@@ -43,7 +43,8 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest && cypress open",
+    "test:jest": "jest",
     "test:cypress": "cypress open",
     "lint": "eslint './src/**/*.{ts,tsx}' './spec/**/*.{ts,tsx}' --quiet",
     "dev": "parcel ./src/index.html",

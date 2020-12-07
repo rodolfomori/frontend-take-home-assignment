@@ -14,6 +14,7 @@ export interface NumberFormatProps
   allowEmptyFormatting?: boolean;
   prefix?: string;
   value?: number | string;
+  maxValue?: number;
   isNumericString?: boolean;
   displayType?: 'input' | 'text';
   type?: 'text' | 'tel';

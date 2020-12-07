@@ -12,6 +12,7 @@ export function Input({
   allowNegative,
   prefix,
   value,
+  maxValue,
   ...rest
 }: NumberFormatProps) {
   return (
@@ -24,7 +25,7 @@ export function Input({
         thousandSeparator={thousandSeparator}
         allowNegative={allowNegative}
         prefix={prefix}
-        value={value}
+        value={value > maxValue ? maxValue : value}
         {...rest}
       />
     </Container>

@@ -22,6 +22,7 @@ export const Dashboard: React.FC = () => {
             data-testid="input-total-amount"
             defaultValue={0}
             placeholder={''}
+            maxValue={10000000000}
             allowEmptyFormatting={true}
             thousandSeparator={true}
             allowNegative={false}

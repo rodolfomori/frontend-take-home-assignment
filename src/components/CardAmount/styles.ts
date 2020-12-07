@@ -1,6 +1,21 @@
 import styled, { css } from 'styled-components';
 
-import { MonthlyAmountProps, TopWrapperProps } from './index';
+interface GeneralProps {
+  'data-testid'?: string;
+  size?: string;
+  monthlyAmountLength?: number;
+}
+export interface MonthlyAmountProps
+  extends React.HTMLAttributes<HTMLSpanElement>,
+    GeneralProps {}
+
+export interface TextProps
+  extends React.HTMLAttributes<HTMLParagraphElement>,
+    GeneralProps {}
+
+export interface TopWrapperProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    GeneralProps {}
 
 export const Container = styled.div`
   background: ${props => props.theme.pallete.whiteBackground};
@@ -25,7 +40,7 @@ export const TopWrapper = styled.div<TopWrapperProps>`
     `}
 `;
 
-export const Text = styled.p<TopWrapperProps>`
+export const Text = styled.p<TextProps>`
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -42,7 +57,7 @@ export const Text = styled.p<TopWrapperProps>`
   flex-grow: 0;
   margin: 0px 10px;
   ${props =>
-    props.size === 'big' &&
+    (props.size === 'big' || props.size === 'extra') &&
     css`
       font-size: 17px;
     `}
@@ -64,6 +79,12 @@ export const MonthlyAmount = styled.span<MonthlyAmountProps>`
   align-self: stretch;
   flex-grow: 0;
   margin: 0px 10px;
+
+  ${props =>
+    props.size === 'extra' &&
+    css`
+      font-size: ${30 - props.monthlyAmountLength}px;
+    `}
 `;
 
 export const BottomWrapper = styled.div`

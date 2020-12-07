@@ -3,7 +3,7 @@ import { default as NumberFormat } from 'react-number-format';
 
 import styled from 'styled-components';
 
-import { NumberFormatProps } from './index';
+import { NumberFormatProps } from './input.interface';
 
 export const Container = styled.div``;
 

@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { MonthlyAmountProps, TopWrapperProps } from './index';
 
 export const Container = styled.div`
   background: ${props => props.theme.pallete.whiteBackground};
@@ -9,47 +11,59 @@ export const Container = styled.div`
   margin-top: 24px;
 `;
 
-export const TopWrapper = styled.div`
+export const TopWrapper = styled.div<TopWrapperProps>`
   display: flex;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 120%;
-    text-align: center;
-    display: flex;
-    align-items: center;
 
-    color: #1e2a32;
+  ${props =>
+    props.size !== 'small' &&
+    css`
+      padding-left: 0px;
+    `}
+`;
 
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 10px;
-  }
+export const Text = styled.p<TopWrapperProps>`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  display: flex;
+  align-items: center;
 
-  span {
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 120%;
+  color: #1e2a32;
 
-    text-align: right;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 10px;
+  ${props =>
+    props.size === 'big' &&
+    css`
+      font-size: 17px;
+    `}
+`;
 
-    color: ${props => props.theme.pallete.textBlue};
+export const MonthlyAmount = styled.span<MonthlyAmountProps>`
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
 
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 10px;
-  }
+  text-align: right;
+
+  color: ${props => props.theme.pallete.textBlue};
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 10px;
 `;
 
 export const BottomWrapper = styled.div`

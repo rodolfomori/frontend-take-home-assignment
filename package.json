@@ -44,10 +44,10 @@
   },
   "scripts": {
     "test": "jest",
+    "test:cypress": "cypress open",
     "lint": "eslint './src/**/*.{ts,tsx}' './spec/**/*.{ts,tsx}' --quiet",
     "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html",
-    "test:cypress": "cypress open"
+    "build": "parcel build ./src/index.html"
   },
   "jest": {
     "setupFiles": ["jest-date-mock"]

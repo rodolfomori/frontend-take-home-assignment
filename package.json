@@ -10,7 +10,9 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
-      "eslint --fix",
+      "eslint --fix"
+    ],
+    "./spec/**/*.{spec,tsx}":[
       "cross-env CI=true npm run test:jest --bail"
     ]
   },

@@ -22,11 +22,13 @@ export const TopWrapper = styled.div<TopWrapperProps>`
   justify-content: space-between;
   padding: 20px;
 
-  ${props =>
-    props.size !== 'small' &&
-    css`
-      padding-left: 0px;
-    `}
+  ${props => props.theme.media.desktop} {
+    ${props =>
+      props.size !== 'small' &&
+      css`
+        padding-left: 0px;
+      `}
+  }
 `;
 
 export const Text = styled.p<TextProps>`
@@ -45,11 +47,14 @@ export const Text = styled.p<TextProps>`
   align-self: stretch;
   flex-grow: 0;
   margin: 0px 10px;
-  ${props =>
-    (props.size === 'big' || props.size === 'extra') &&
-    css`
-      font-size: 17px;
-    `}
+
+  ${props => props.theme.media.desktop} {
+    ${props =>
+      (props.size === 'big' || props.size === 'extra') &&
+      css`
+        font-size: 17px;
+      `}
+  }
 `;
 
 export const MonthlyAmount = styled.span<MonthlyAmountProps>`
@@ -69,11 +74,13 @@ export const MonthlyAmount = styled.span<MonthlyAmountProps>`
   flex-grow: 0;
   margin: 0px 10px;
 
-  ${props =>
-    props.size === 'extra' &&
-    css`
-      font-size: ${30 - props.monthlyAmountLength}px;
-    `}
+  ${props => props.theme.media.desktop} {
+    ${props =>
+      props.size === 'extra' &&
+      css`
+        font-size: ${30 - props.monthlyAmountLength}px;
+      `}
+  }
 `;
 
 export const BottomWrapper = styled.div`

@@ -5,12 +5,13 @@
   "main": "src/index.ts",
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && cross-env CI=true npm run test:jest"
+      "pre-commit": "lint-staged && cross-env CI=true npm run test:jest --bail --findRelatedTests"
     }
   },
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
-      "eslint --fix", "git add ."
+      "eslint --fix",
+      "git add ."
     ]
   },
   "dependencies": {

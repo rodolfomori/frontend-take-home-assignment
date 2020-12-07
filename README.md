@@ -59,15 +59,14 @@ The project is a simulator to help users simulate how and when they will achieve
 
 Unit test with Jest and Enzyme
 <br>
-<br>
 ```npm run test:jest```
-
+<br>
+<br>
 E2E test with Cypress
-<br>
 <br>```npm run test:cypress```
-
-All test
 <br>
+<br>
+All test
 <br>
 ```npm run test```
 

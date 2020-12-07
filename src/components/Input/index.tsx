@@ -22,6 +22,7 @@ export function Input({
         defaultValue={defaultValue}
         placeholder={placeholder}
         allowEmptyFormatting={allowEmptyFormatting}
+        decimalScale={2}
         thousandSeparator={thousandSeparator}
         allowNegative={allowNegative}
         prefix={prefix}

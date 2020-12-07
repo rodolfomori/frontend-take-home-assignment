@@ -24,7 +24,7 @@ describe('GoalCalculation hook', () => {
 
     expect(result.current.chosenMonth).toBe(firtsPlanning.getMonth() - 1);
     expect(result.current.chosenYear).toBe(firtsPlanning.getFullYear());
-    expect(result.current.monthlyAmount).toBe('213');
+    expect(result.current.monthlyAmount).toBe('212.77');
     expect(result.current.mounthQuantity).toBe(47);
     expect(result.current.totalAmount).toBe(10000);
   });
@@ -63,7 +63,7 @@ describe('GoalCalculation hook', () => {
 
     expect(result.current.chosenMonth).toBe(firtsPlanning.getMonth() + 1);
     expect(result.current.chosenYear).toBe(firtsPlanning.getFullYear());
-    expect(result.current.monthlyAmount).toBe('510');
+    expect(result.current.monthlyAmount).toBe('510.20');
     expect(result.current.mounthQuantity).toBe(49);
     expect(result.current.totalAmount).toBe(25000);
   });

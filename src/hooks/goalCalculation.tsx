@@ -65,7 +65,7 @@ export const GoalCalculationProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     setMonthlyAmount(
-      `${(Number(totalAmount) / mounthQuantity).toFixed(0).toString()}`
+      `${(Number(totalAmount) / mounthQuantity).toFixed(2).toString()}`
     );
   }, [mounthQuantity, totalAmount]);
 

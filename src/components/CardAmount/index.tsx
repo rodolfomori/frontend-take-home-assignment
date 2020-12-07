@@ -20,7 +20,7 @@ export const CardAmount: React.FC = () => {
   } = useGoalCalculation();
   const [size, setSize] = React.useState<string>('small');
   const [monthlyAmountLength, setMonthlyAmountLength] = React.useState<number>(
-    monthlyAmount.length
+    0
   );
 
   React.useEffect(() => {

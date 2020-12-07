@@ -8,7 +8,7 @@ context('Home Buy a house', () => {
   });
 
   const date = new Date();
-  const firtsPlanning = new Date(addMonths(date, 48));
+  const firtsPlanning = new Date(Number(addMonths(date, 48)));
   const month = getMonthName(firtsPlanning.getMonth());
   const year = firtsPlanning.getFullYear();
 

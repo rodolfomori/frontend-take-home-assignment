@@ -17,7 +17,7 @@
 
 <br>
 
-<img alt="Layout" src="https://res.cloudinary.com/dpg6ix1ze/image/upload/v1607343524/Projects/result_w8bxu6.png">
+<img alt="Layout" src="https://res.cloudinary.com/dpg6ix1ze/image/upload/v1607354033/Projects/result_gqeihl.png">
 <br>
 
 
@@ -52,6 +52,19 @@ The project is a simulator to help users simulate how and when they will achieve
 **Install dependencies**
 
 ```npm install```
+
+<br>
+
+**Run Tests**
+
+Unit test with Jest and Enzyme
+```npm run test:jest```
+
+E2E test with Cypress
+```npm run test:cypress```
+
+All test
+```npm run test```
 
 <br>
 

@@ -48,13 +48,13 @@ The project is a simulator to help users simulate how and when they will achieve
 
 **You need to install [Node.js](https://nodejs.org/en/download/) first, then in order to clone the project via HTTPS, run this command:**
 
-```git clone https://github.com/rodolfomori/frontend-take-home-assignment.git```
+```$ git clone https://github.com/rodolfomori/frontend-take-home-assignment.git```
 
 <br>
 
 **Install dependencies**
 
-```npm install```
+```$ npm install```
 
 <br>
 
@@ -62,16 +62,16 @@ The project is a simulator to help users simulate how and when they will achieve
 
 Unit test with Jest and Enzyme
 <br>
-```npm run test:jest```
+```$ npm run test:jest```
 <br>
 <br>
-E2E test with Cypress (You need to have the project running ```$npm run dev```)
-<br>```npm run test:cypress```
+E2E test with Cypress (You need to have the project running ```$ npm run dev```)
+<br>```$ npm run test:cypress```
 <br>
 <br>
-All test (You need to have the project running ```$npm run dev```)
+All test (You need to have the project running ```$ npm run dev```)
 <br>
-```npm run test```
+```$ npm run test```
 
 <br>
 
@@ -79,7 +79,7 @@ All test (You need to have the project running ```$npm run dev```)
 
 Run the following command in order to start the application in a development environment:
 
-```npm run dev```
+```$ npm run dev```
 
 <br>
 

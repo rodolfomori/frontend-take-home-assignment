@@ -26,9 +26,18 @@
 The project is a simulator to help users simulate how and when they will achieve their goal of buying their own home.
 <br>
 
-## 🚀 Technologies
+## :computer: Technologies
 
-Technologies that I used to develop this api
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://enzymejs.github.io/enzyme/)
+- [Cypress](https://www.cypress.io/)
+- [Styled Components](https://styled-components.com/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Date-fns](https://date-fns.org/)
+- [Polished](https://polished.js.org/)
 
 <br>
 
@@ -43,6 +52,7 @@ Technologies that I used to develop this api
 
 ```npm install```
 
+<br>
 
 # :runner: Getting Started
 
@@ -50,25 +60,15 @@ Run the following command in order to start the application in a development env
 
 ```npm run dev```
 
+<br>
 
-## :computer: Technologies
-
-- [ReactJS](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Jest](https://jestjs.io/)
-- [Enzyme](https://enzymejs.github.io/enzyme/)
-- [Cypress](https://www.cypress.io/)
-- [Styled Components](https://styled-components.com/)
-- [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
-- [Date-fns](https://date-fns.org/)
-- [Polished](https://polished.js.org/)
 
 # :bug: Issues
 
 Feel free to **file a new issue** with a respective title and description on the [Origin Take-Home Assignment](https://github.com/rodolfomori/frontend-take-home-assignment/issues) repository. If you already found a solution to your problem, **I would love to review your pull request**!.
 
-# :closed_book: License
+<br>
+
 
 
 

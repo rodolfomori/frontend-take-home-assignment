@@ -2,6 +2,9 @@
   <img src="https://assets-global.website-files.com/5fc46a8c6532b70b61e49a29/5fc46a8c6532b7ebb5e49a87_origin_logo_dark.svg" alt="Origin" width="250px">
 </h1>
 
+[We are ONLINE, try Now](https://use-origin.netlify.app/) :tada:<br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64477c4a-1860-45a3-b39e-da52e27b0c60/deploy-status)](https://app.netlify.com/sites/use-origin/deploys)
+
 <h3 align="center">
   Let's plan your saving goal.
 </h3>

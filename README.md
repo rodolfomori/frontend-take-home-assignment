@@ -12,7 +12,7 @@
 <br>
 
 <p align="center">
-  <a href="#house_with_garden-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#house-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#construction_worker-installation">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bug-issues">Issues</a>&nbsp;&nbsp;&nbsp;
@@ -24,7 +24,7 @@
 <br>
 
 
-## 🏡  About the project
+## :house: About the project
 
 The project is a simulator to help users simulate how and when they will achieve their goal of buying their own home.
 <br>

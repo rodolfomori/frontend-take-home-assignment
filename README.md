@@ -65,11 +65,11 @@ Unit test with Jest and Enzyme
 ```npm run test:jest```
 <br>
 <br>
-E2E test with Cypress
+E2E test with Cypress (You need to have the project running ```$npm run dev```)
 <br>```npm run test:cypress```
 <br>
 <br>
-All test
+All test (You need to have the project running ```$npm run dev```)
 <br>
 ```npm run test```
 

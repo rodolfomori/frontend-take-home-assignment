@@ -41,6 +41,8 @@ The project is a simulator to help users simulate how and when they will achieve
 - [Prettier](https://prettier.io/)
 - [Date-fns](https://date-fns.org/)
 - [Polished](https://polished.js.org/)
+- [Husky](https://github.com/typicode/husky/)
+
 
 <br>
 

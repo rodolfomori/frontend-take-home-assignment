@@ -3,17 +3,7 @@
   "version": "0.0.1",
   "description": "Origin Frontend Challenge",
   "main": "src/index.ts",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && cross-env CI=true npm run test:jest --bail --findRelatedTests"
-    }
-  },
-  "lint-staged": {
-    "./src/**/*.{ts,tsx}": [
-      "eslint --fix",
-      "git add ."
-    ]
-  },
+
   "dependencies": {
     "acorn": "^7.1.1",
     "cross-env": "^7.0.3",
@@ -64,6 +54,17 @@
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && cross-env CI=true npm run test:jest --bail --findRelatedTests"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "git add ."
+    ]
+  },
   "jest": {
     "setupFiles": [
       "jest-date-mock"
@@ -73,7 +74,7 @@
     "type": "git",
     "url": "git+https://github.com/OriginFinancial/frontend-challenge.git"
   },
-  "author": "",
+  "author": "Rodolfo Mori",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OriginFinancial/frontend-challenge/issues"

@@ -1,4 +1,4 @@
-import { getMonthName } from './getMonth';
+import { getMonthName } from '../../src/utils';
 
 describe('get month basic tests', function() {
   it('should return correct month', () => {

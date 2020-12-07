@@ -1,4 +1,4 @@
-import { currencyFormatter } from './currencyFormatter';
+import { currencyFormatter } from '../../src/utils';
 
 describe('Currency formatter tests', function() {
   it('format value $1,000', () => {

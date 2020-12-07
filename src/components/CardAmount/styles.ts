@@ -1,21 +1,10 @@
 import styled, { css } from 'styled-components';
 
-interface GeneralProps {
-  'data-testid'?: string;
-  size?: string;
-  monthlyAmountLength?: number;
-}
-export interface MonthlyAmountProps
-  extends React.HTMLAttributes<HTMLSpanElement>,
-    GeneralProps {}
-
-export interface TextProps
-  extends React.HTMLAttributes<HTMLParagraphElement>,
-    GeneralProps {}
-
-export interface TopWrapperProps
-  extends React.HTMLAttributes<HTMLDivElement>,
-    GeneralProps {}
+import {
+  TopWrapperProps,
+  TextProps,
+  MonthlyAmountProps
+} from './card.interface';
 
 export const Container = styled.div`
   background: ${props => props.theme.pallete.whiteBackground};

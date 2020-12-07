@@ -9,5 +9,5 @@
     "allowJs": true,
     "checkJs": false,
   },
-  "include": ["./src/**/*", "./src/index.d.ts"]
+  "include": ["./src/**/*", "./src/index.d.ts", "spec/utils/currencyFormatter.spec.ts"]
 }

@@ -1,94 +1,80 @@
-# Origin Frontend Take-Home Assignment
+<h1 align="center">
+  <img src="./src/icons/Logo.svg" alt="Origin" width="250px">
+</h1>
 
-Origin is a platform that helps our customers' employees put their financial lives on track.
+<h3 align="center">
+  Let's plan your saving goal.
+</h3>
 
-One key to financial well-being is planning & saving for your goals. Users can have many saving goals (e.g. go to college or throw a wedding party) and it is our job to help them accomplish it.
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/EliasGcf/gofinances?color=%235636D3">
+  <a href="https://www.linkedin.com/in/eliasgcf/"><img alt="Made by" src="https://img.shields.io/badge/made%20by-Elias%20Gabriel-%235636D3"></a>
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/EliasGcf/gofinances?color=%235636D3">
+  <a href="https://github.com/EliasGcf/gofinances/commits/master"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/EliasGcf/gofinances?color=%235636D3"></a>
+  <a href="https://github.com/EliasGcf/gofinances/issues"><img alt="Repository issues" src="https://img.shields.io/github/issues/EliasGcf/gofinances?color=%235636D3"></a>
+  <img alt="GitHub" src="https://img.shields.io/github/license/EliasGcf/gofinances?color=%235636D3">
+</p>
 
-You will build a piece of our savings feature by creating the savings plan simulation screen.
+<p align="center">
+  <a href="#-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-how-to-contribute">How to contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
 
-### The Saving Goal Plan Simulation Screen
 
-![Saving Goal Plan Mockup Desktop](https://github.com/OriginFinancial/frontend-take-home-assignment/blob/master/mockups/saving-goal-plan-desk.png)
+<img alt="Layout" src="https://res.cloudinary.com/dpg6ix1ze/image/upload/v1607343524/Projects/result_w8bxu6.png">
 
-You will build a screen where the user will simulate saving towards the "Buy a house" savings goal.
-In it, the users choose (i) the value they want to save and (ii) the date they plan to reach the goal.
+## 💰 About the project
 
-When the users change the value of any of the inputs, the monthly deposit value is calculated and displayed to them.
+The project is a simulator to help users simulate how and when they will achieve their goal of buying their own home.
+## 🚀 Technologies
 
-# Development Instructions
+Technologies that I used to develop this api
 
-### Evaluation
-Be aware that Origin will mainly take into consideration the following evaluation criteria:
-* How close your page is to the mockups, both on mobile & desktop;
-* How clean and organized your code is;
-* How good your automated tests are (qualitative over quantitative);
-* And if you implemented the business rules correctly.
+- [ReactJS](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://enzymejs.github.io/enzyme/)
+- [Cypress](https://www.cypress.io/)
+- [Styled Components](https://styled-components.com/)
+- [Eslint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Date-fns](https://date-fns.org/)
+- [Polished](https://polished.js.org/)
 
-### Assets - Pay attention on the dates below
 
-#### Use this mockup if you started the THA before 04 November 2020
-You can find the layout mockups here on our Figma project:
-[Layout mockups](https://www.figma.com/file/kQbSy4KVXeF1tJsQRcYc5o/Take-Home-Assignment?node-id=0%3A1)
+## 💻 Getting started
 
-#### Use this new one mockup if you started the THA on 04 November 2020 or later
-You can find the layout mockups here on our Figma project:
-[Layout mockups](https://www.figma.com/file/Axdg0WSJURcxp8Arq3gg9x/Take-Home-Assignment-v2)
 
-Once you have opened the link you must sign up and log in so you can have access to the colors, fonts, margins and assets information.
+**Clone the project and access the folder**
 
-#### Money input
-
-The money input component should:
-
-- Allow only numbers
-- Display the value formatted as money (e.g 3500.45 should be 3,500.44)
-
-#### Date input
-
-The date input component should:
-
-- Allow only future dates
-- When clicking on the arrow buttons it should go up and down month by month
-- The users should be able to move the months by typing the Left and Right arrow key on the keyboard
-
-#### Confirm button
-
-You don't need to add any action on the confirmation button
-
-### Project structure
-
-We've added a project structure (build system with react, redux, jest, styled-components and typescript) so you don't waste your time with configuration. If you are more comfortable with a different stack, feel free to change it.
-
-# Delivery Instructions
-
-Send us the link to your repository and make sure to make it public.
-
-# Usage
-
-This project requires `Node >=12` and `NPM >= 6`.
-
-After you have cloned this repo, install the dependencies with:
-
-```
-npm install
+```bash
+$ git clone https://github.com/rodolfomori/frontend-take-home-assignment && cd frontend-take-home-assignment
 ```
 
-You can then start the application running:
+**Install dependencies**
 
-```
-npm run dev
-```
-
-That's it. Just Access `http://localhost:1234` in your browser.
-
-### Linting
-
-```
-npm run lint
+```bash
+$ npm install
 ```
 
-### Testing
+**Follow the steps below**
 
+```bash
+
+# Start the client
+$ npm run dev
 ```
-npm run test
-```
+
+
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Made with ♥ by Rodolfo Mori :wave: [Get in touch!](https://www.linkedin.com/in/rodolfomori/)
+t

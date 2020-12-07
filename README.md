@@ -47,6 +47,7 @@ The project is a simulator to help users simulate how and when they will achieve
 
 ```git clone https://github.com/rodolfomori/frontend-take-home-assignment.git```
 
+<br>
 
 **Install dependencies**
 

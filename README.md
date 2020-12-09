@@ -2,8 +2,6 @@
   <img src="https://assets-global.website-files.com/5fc46a8c6532b70b61e49a29/5fc46a8c6532b7ebb5e49a87_origin_logo_dark.svg" alt="Origin" width="250px">
 </h1>
 
-[We are ONLINE, try Now](https://use-origin.netlify.app/) :tada:<br>
-[![Netlify Status](https://api.netlify.com/api/v1/badges/64477c4a-1860-45a3-b39e-da52e27b0c60/deploy-status)](https://app.netlify.com/sites/use-origin/deploys)
 
 <h3 align="center">
   Let's plan your saving goal.
@@ -42,6 +40,8 @@ The project is a simulator to help users simulate how and when they will achieve
 - [Date-fns](https://date-fns.org/)
 - [Polished](https://polished.js.org/)
 - [Husky](https://github.com/typicode/husky/)
+- [Netlify](https://www.netlify.com/)
+- [CircleCi](https://circleci.com/developer/)
 
 
 <br>
@@ -67,11 +67,11 @@ Unit test with Jest and Enzyme
 ```$ npm run test:jest```
 <br>
 <br>
-E2E test with Cypress (You need to have the project running ```$ npm run dev```)
-<br>```$ npm run test:cypress```
+E2E test with Cypress
+<br>```$ npm run test:e2e```
 <br>
 <br>
-All test (You need to have the project running ```$ npm run dev```)
+All test
 <br>
 ```$ npm run test```
 

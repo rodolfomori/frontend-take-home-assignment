@@ -24,6 +24,10 @@ jobs:
           command: |
             npm run test
 
+      - run:
+          name: Deploy
+          command: curl -X POST -d {} ${hook}
+
 workflows:
   version: 2
   pipeline:

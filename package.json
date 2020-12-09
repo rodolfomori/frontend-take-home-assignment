@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Origin Frontend Challenge",
   "main": "src/index.ts",
-
   "dependencies": {
     "acorn": "^7.1.1",
     "cross-env": "^7.0.3",
@@ -43,14 +42,16 @@
     "mkdirp": "^1.0.3",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
+    "start-server-and-test": "^1.11.6",
     "ts-jest": "^25.2.1",
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "test": "jest && cypress run",
+    "test": "jest && test:e2e",
     "test:jest": "jest",
-    "test:cypress": "cypress open",
-    "test:e2e": "cypress run",
+    "test:cypress": "cypress run",
+    "test:cypress-web": "cypress open",
+    "test:e2e": "start-server-and-test dev http://localhost:1234 test:cypress",
     "lint": "eslint './src/**/*.{ts,tsx}' './spec/**/*.{ts,tsx}' --quiet",
     "dev": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"

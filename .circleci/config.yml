@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  test_and_lint:
+  test_lint_and_deploy:
     docker:
       - image: circleci/node:latest-browsers
     working_directory: /home/circleci/frontend-take-home-assignment
@@ -32,4 +32,4 @@ workflows:
   version: 2
   pipeline:
     jobs:
-      - test_and_lint
+      - test_lint_and_deploy
